@@ -1,0 +1,16 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "declarationDir": "dist"
+  },
+  "files": [
+    "src/xtream-posts.tsx",
+    "./node_modules/@types/posts-types/index.d.ts"
+  ],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}

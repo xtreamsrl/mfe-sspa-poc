@@ -1,0 +1,6 @@
+packages:
+  - 'home'
+  - 'posts'
+  - 'posts-types'
+  - 'root'
+  - 'package-type-generator'

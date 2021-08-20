@@ -1,0 +1,19 @@
+{
+  "name": "package-type-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "package-type-generator": "bin/package-type-generator.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luca Micieli",
+  "license": "ISC",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "rollup": "^2.56.2",
+    "rollup-plugin-dts": "^3.0.2"
+  }
+}
