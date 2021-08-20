@@ -1,3 +1,4 @@
 /**/node_modules
 node_modules
 .idea
+pnpm --package=@nestjs/cli dlx nest new back-end
