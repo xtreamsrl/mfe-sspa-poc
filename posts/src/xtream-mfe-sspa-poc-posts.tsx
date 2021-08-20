@@ -1,5 +1,3 @@
-/// <reference path="../node_modules/@types/posts-types/index.d.ts" />
-
 import React from "react";
 import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";

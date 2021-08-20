@@ -5,7 +5,7 @@
     "declarationDir": "dist"
   },
   "files": [
-    "src/xtream-home.tsx",
+    "src/xtream-mfe-sspa-poc-home.tsx",
     "./node_modules/@types/xtream-posts"
   ],
   "include": ["src/**/*"],
