@@ -13,7 +13,7 @@
     "watch-tests": "cross-env BABEL_ENV=test jest --watch",
     "coverage": "cross-env BABEL_ENV=test jest --coverage",
     "build:types": "tsc",
-    "export-tpes": "pnpm exec package-type-generator .\\dist\\xtream-posts.d.ts ..\\posts-types\\index.d.ts"
+    "export-tpes": "pnpm exec package-type-generator .\\dist\\xtream-mfe-sspa-poc-posts.d.ts ..\\posts-types\\index.d.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",

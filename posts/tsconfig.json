@@ -8,8 +8,7 @@
     "declarationDir": "dist"
   },
   "files": [
-    "src/xtream-mfe-sspa-poc-posts.tsx",
-    "./node_modules/@types/posts-types/index.d.ts"
+    "src/xtream-mfe-sspa-poc-posts.tsx"
   ],
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]
