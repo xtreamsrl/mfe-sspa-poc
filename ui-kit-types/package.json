@@ -1,0 +1,11 @@
+{
+  "name": "@types/xtream-mfe-sspa-poc-ui-kit",
+  "version": "1.0.1",
+  "description": "",
+  "types": "./index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luca Micieli",
+  "license": "ISC"
+}

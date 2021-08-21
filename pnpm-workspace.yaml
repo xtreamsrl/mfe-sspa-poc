@@ -5,3 +5,5 @@ packages:
   - 'root'
   - 'package-type-generator'
   - 'back-end'
+  - 'ui-kit'
+  - 'ui-kit-types'
