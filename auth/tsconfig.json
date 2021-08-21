@@ -1,8 +1,6 @@
 {
   "extends": "ts-config-single-spa",
-  "files": [
-    "src/xtream-mfe-sspa-poc-root-config.ts"
-  ],
+  "files": ["src/xtream-mfe-sspa-poc-auth.ts"],
   "compilerOptions": {
     "declarationDir": "dist"
   },

@@ -1,11 +1,13 @@
 <single-spa-router>
   <main>
-    <route default>
+    <route path="home">
       <application name="@xtream-mfe-sspa-poc/home"></application>
     </route>
     <route path="posts">
       <application name="@xtream-mfe-sspa-poc/posts"></application>
     </route>
-
+    <route default>
+      <application name="@xtream-mfe-sspa-poc/login"></application>
+    </route>
   </main>
 </single-spa-router>

@@ -39,7 +39,9 @@
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.development.min.js",
         "@xtream-mfe-sspa-poc/posts": "http://localhost:8080/xtream-mfe-sspa-poc-posts.js",
         "@xtream-mfe-sspa-poc/home": "http://localhost:8081/xtream-mfe-sspa-poc-home.js",
-        "@xtream-mfe-sspa-poc/ui-kit": "http://localhost:8082/xtream-mfe-sspa-poc-ui-kit.js"
+        "@xtream-mfe-sspa-poc/ui-kit": "http://localhost:8082/xtream-mfe-sspa-poc-ui-kit.js",
+        "@xtream-mfe-sspa-poc/login": "http://localhost:8083/xtream-mfe-sspa-poc-login.js",
+        "@xtream-mfe-sspa-poc/auth": "http://localhost:8084/xtream-mfe-sspa-poc-auth.js"
       }
     }
   </script>
@@ -53,7 +55,7 @@
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@xtream/root-config": "//localhost:9000/xtream-root-config.js"
+        "@xtream/root-config": "//localhost:9000/xtream-mfe-sspa-poc-root-config.js"
       }
     }
   </script>
@@ -74,6 +76,12 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
 
+  <style>
+    body{
+      background-color: #EEEEEE;
+      margin:0;
+    }
+  </style>
 </head>
 <body>
   <noscript>

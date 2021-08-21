@@ -1,4 +1,4 @@
 {
-  "extends": ["ts-important-stuff", "plugin:prettier/recommended"],
+  "extends": ["ts-important-stuff"],
   "parser": "@babel/eslint-parser"
 }

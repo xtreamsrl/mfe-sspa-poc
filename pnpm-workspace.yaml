@@ -7,3 +7,5 @@ packages:
   - 'back-end'
   - 'ui-kit'
   - 'ui-kit-types'
+  - 'login'
+  - 'auth'
