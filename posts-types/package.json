@@ -1,6 +1,6 @@
 {
   "name": "@types/xtream-mfe-sspa-poc-posts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "types": "./index.d.ts",
   "scripts": {
