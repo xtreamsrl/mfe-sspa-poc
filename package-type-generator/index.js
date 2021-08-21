@@ -11,6 +11,41 @@ async function build(inputOptions, outputOptions) {
     await bundle.close();
 }
 
+async function watch(inputOptions, outputOptions) {
+    const watchOptions = {
+        ...inputOptions,
+        output: [outputOptions],
+        watch: {
+        }
+    };
+    const watcher = rollup.watch(watchOptions);
+
+    watcher.on('event', event => {
+    });
+
+// This will make sure that bundles are properly closed after each run
+    watcher.on('event', ({ result }) => {
+        if (result) {
+            result.close();
+            wrapWithModule(outputOptions.file);
+
+        }
+    });
+
+// stop watching
+    // watcher.close();
+}
+
+function wrapWithModule(outputFile) {
+    const file = fs.readFileSync(outputFile).toString();
+    const noDeclare = file.split('declare ').join('');
+
+    const packageName = JSON.parse(fs.readFileSync('./package.json').toString()).name;
+
+    const withDeclaration = `declare module '${packageName}' {\n${  noDeclare.split('\n').join('\n  ')}\n}\n`;
+    fs.writeFileSync(outputFile, withDeclaration);
+}
+
 async function cli(args) {
     const inputFile = args[2];
     const outputFile = args[3];
@@ -24,15 +59,14 @@ async function cli(args) {
         plugins: [dts()],
     };
 
-    await build(inputOptions, outputOptions);
+    console.debug(args);
+    if(args.includes('-w')){
+        watch(inputOptions, outputOptions);
+    } else {
+        await build(inputOptions, outputOptions);
+        wrapWithModule(outputFile);
+    }
 
-    const file = fs.readFileSync(outputFile).toString();
-    const noDeclare = file.split("declare ").join("");
-
-    const packageName = JSON.parse(fs.readFileSync('./package.json').toString()).name;
-
-    const withDeclaration = `declare module '${packageName}' {\n${noDeclare.split('\n').join('\n  ')}\n}\n`;
-    fs.writeFileSync(outputFile, withDeclaration);
 }
 
 module.exports = {cli};
