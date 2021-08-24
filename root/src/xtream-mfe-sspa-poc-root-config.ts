@@ -45,8 +45,6 @@ function wrapActivationWithUserCheck(activity: Activity, name: string) {
   }
 
   return (location: Location) => {
-    console.debug('wrapActivationWithUserCheck', name, activity);
-
     if (name === '@xtream-mfe-sspa-poc/login') {
       return !user;
     }
@@ -65,3 +63,10 @@ applications.forEach(value => {
 });
 layoutEngine.activate();
 start();
+
+function test(ev:any){
+  console.debug('ev', ev);
+  return false;
+}
+
+window.addEventListener("single-spa:before-routing-event", test);

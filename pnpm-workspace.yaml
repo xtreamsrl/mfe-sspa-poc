@@ -1,11 +1,4 @@
 packages:
-  - 'home'
-  - 'posts'
-  - 'posts-types'
+  - 'micros/**'
+  - 'libraries/**'
   - 'root'
-  - 'package-type-generator'
-  - 'back-end'
-  - 'ui-kit'
-  - 'ui-kit-types'
-  - 'login'
-  - 'auth'
